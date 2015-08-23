@@ -1,0 +1,26 @@
+{
+  "name": "tinydialog.js",
+  "version": "0.0.1",
+  "description": "a tiny dialog plugin",
+  "main": "tinyDialog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrendEr/tinyDialog.js.git"
+  },
+  "keywords": [
+    "dialog"
+  ],
+  "author": "Frend",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FrendEr/tinyDialog.js/issues"
+  },
+  "homepage": "https://github.com/FrendEr/tinyDialog.js#readme",
+  "dependencies": {
+    "animate.css": "^3.4.0",
+    "jquery": "^2.1.4"
+  }
+}

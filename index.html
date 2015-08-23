@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>tinyDialog demo</title>
+        <link rel="stylesheet" href="./tinyDialog.css" media="screen" title="no title" charset="utf-8">
+        <style media="screen">
+        .code-wrapper {
+            overflow: hidden;
+        }
+        .code-input {
+            float: left;
+            margin-right: 10px;
+            border: 1px solid #c7c7c7;
+            width: 100px;
+            height: 30px;
+            text-indent: 10px;
+        }
+        .code-input:focus {
+            outline: none;
+        }
+        .dynamic-code {
+            float: left;
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #f1f1f1;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #05b47a;
+        }
+        </style>
+    </head>
+    <body>
+        <button type="button" id="button1">取消/确定</button>
+        <button type="button" id="button2">确定</button>
+        <script src="./node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
+        <script src="./tinyDialog.js" charset="utf-8"></script>
+        <script type="text/javascript">
+        document.querySelector('#button1').onclick = function() {
+            var td = new tinyDialog({
+                title: '来自我趣的温馨提醒',
+                content: '已填写订单信息将被清空，是否放弃填写？',
+                width: 290,
+                okValue: '继续填写',
+                ok: function() {
+                    console.log('你选择了继续填写');
+                    this.close();
+                },
+                cancelValue: '放弃',
+                cancel: function() {
+                    this.close();
+                }
+            });
+        }
+        document.querySelector('#button2').onclick = function() {
+            var td = new tinyDialog({
+                content: '<div class="code-wrapper"><input class="code-input" type="text" placeholder="图片验证码"><span class="dynamic-code">fs2c</span></div>',
+                okValue: '确定',
+                ok: function() {
+                    var value = this.$dialog.find('.code-input').val();
+
+                    if ($.trim(value)) {
+                        alert('验证码为:' + value);
+                        this.close();
+                    } else {
+                        alert('请输入正确的验证码!');
+                    }
+                },
+                customEvent: function() {
+                    this.$dialog.on('click', '.dynamic-code', function() {
+                        alert('更换动态验证码!');
+                    });
+                    this.$dialog.on('focus', '.code-input', function() {
+                        $(this).css({
+                            'border-color': '#f08300',
+                            'box-shadow': '1px 1px 1px #f08300'
+                        });
+                    });
+                    this.$dialog.on('blur', '.code-input', function() {
+                        $(this).css({
+                            'border-color': '#c7c7c7',
+                            'box-shadow': 'none'
+                        });
+                    });
+                }
+            });
+        }
+        </script>
+    </body>
+</html>
