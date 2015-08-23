@@ -3,25 +3,35 @@
 
 ## Options
 
-- **title** : `@String` title text
+- **title**
+> `@String` title text
 
-- **content** : `@String` main content text, it can contain html element and bind events via `customEvent`
+- **content**
+> `@String` main content text, it can contain html element and bind events via **customEvent**
 
-- **backdrop** : `@Boolean` has backdrop
+- **backdrop**
+> `@Boolean` has backdrop
 
-- **quickClose** : `@Boolean` should click backdrop to close the dialog
+- **quickClose**
+> `@Boolean` should click backdrop to close the dialog
 
-- **width** : `@Number` set the dialog's width, max is 290(px)
+- **width**
+> `@Number` set the dialog's width, max is 290(px)
 
-- **okValue** : `@String` ok button text
+- **okValue**
+> `@String` ok button text
 
-- **ok** : `@Function` click ok button event
+- **ok**
+> `@Function` click ok button event
 
-- **cancelValue** : `@String` cancel button text
+- **cancelValue**
+> `@String` cancel button text
 
-- **cancel** : `@Function` click cancel button event
+- **cancel**
+> `@Function` click cancel button event
 
-- **customEvent** : `@Function` the events binding the `content`
+- **customEvent**
+> `@Function` the events binding the **content**
 
 ## Usage
 
