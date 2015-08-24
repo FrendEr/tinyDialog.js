@@ -92,7 +92,7 @@ var td = new tinyDialog({
 
 ```js
 
-git clone https://github.com/FrendEr/tinyDialog.js
+git clone https://github.com/FrendEr/tinyDialog.js.git
 cd tinyDialog.js
 open index.html
 
