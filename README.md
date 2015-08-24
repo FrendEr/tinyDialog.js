@@ -1,4 +1,4 @@
-# tinyDialog.js
+# Tinydialog.js
 > a tiny dialog plugin.
 
 ## Options
@@ -92,8 +92,8 @@ var td = new tinyDialog({
 
 ```js
 
-git clone https://github.com/FrendEr/tinyDialog.js.git
-cd tinyDialog.js
+git clone https://github.com/FrendEr/tinydialog.js.git
+cd tinydialog.js
 open index.html
 
 ```
